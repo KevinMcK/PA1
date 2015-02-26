@@ -71,19 +71,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(210,500)" to="(210,590)"/>
     <wire from="(670,230)" to="(730,230)"/>
     <wire from="(670,320)" to="(730,320)"/>
-    <comp lib="7" loc="(250,270)" name="Mips ALU"/>
+    <comp lib="7" loc="(890,240)" name="RegisterFile"/>
+    <comp lib="2" loc="(510,300)" name="Multiplexer"/>
+    <comp lib="7" loc="(280,140)" name="Incrementer"/>
+    <comp lib="7" loc="(870,490)" name="MIPS RAM"/>
+    <comp lib="7" loc="(610,680)" name="LCD Video"/>
+    <comp lib="7" loc="(400,150)" name="Mips ALU"/>
     <comp lib="0" loc="(150,590)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="7" loc="(280,140)" name="Incrementer"/>
-    <comp lib="7" loc="(870,490)" name="MIPS RAM"/>
-    <comp lib="2" loc="(510,300)" name="Multiplexer"/>
-    <comp lib="7" loc="(890,240)" name="RegisterFile"/>
+    <comp lib="7" loc="(250,270)" name="Mips ALU"/>
     <comp lib="7" loc="(440,440)" name="MIPSProgramROM">
       <a name="contents" val=""/>
     </comp>
-    <comp lib="7" loc="(610,680)" name="LCD Video"/>
   </circuit>
   <circuit name="Fetch">
     <a name="circuit" val="Fetch"/>
@@ -94,20 +95,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(380,550)" to="(500,550)"/>
     <wire from="(500,430)" to="(500,550)"/>
     <comp lib="7" loc="(210,240)" name="MIPS RAM"/>
+    <comp lib="7" loc="(280,760)" name="RegisterFile"/>
+    <comp lib="0" loc="(380,550)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(730,370)" name="MIPSProgramROM">
+      <a name="contents">ADDIU $12, $0, PC
+</a>
+    </comp>
     <comp lib="0" loc="(920,370)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(380,550)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(280,760)" name="RegisterFile"/>
-    <comp lib="7" loc="(730,370)" name="MIPSProgramROM">
-      <a name="contents">ADDIU $12, $0, PC
-</a>
     </comp>
   </circuit>
   <circuit name="Decode">
